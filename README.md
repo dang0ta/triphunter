@@ -43,6 +43,9 @@ Open [this](https://module-1-dang0ta.vercel.app/) link for the live version of t
 - [ ]  add deployment, custom domain, and configuration documentation to the Readme.
 - [ ]  deploy the page to the internet using custom domain.
 - [ ]  add screenshots for each major update to the page.
+- [ ]  ensure the deployed page has at least 90 rating on Google Lighthouse.
+- [ ]  add dark/light mode toggle.
+- [ ]  create non-JS image carousel.
 
 
 ## Screenshot
