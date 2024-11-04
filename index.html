@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunt your next Trip!</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/styles/global.css" />
+    <link rel="stylesheet" href="assets/styles/hero.css" />
+    <link rel="stylesheet" href="assets/styles/hamburger.css" />
+    <link rel="stylesheet" href="assets/styles/filters.css" />
+    <link rel="stylesheet" href="assets/styles/bottom.css" />
+    <link rel="stylesheet" href="assets/styles/footer.css" />
+    <link rel="stylesheet" href="assets/styles/google-sign-in.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <header>
+      <div class="logo">TripHunter</div>
+      
+      <nav role="navigation">
+        <div class="account">
+            <div class="username" id="sign-in-result"></div>
+
+            <!-- google sign in button from https://developers.google.com/identity/branding-guidelines -->
+            <button class="gsi-material-button" id="google-sign-in">
+              <div class="gsi-material-button-state"></div>
+              <div class="gsi-material-button-content-wrapper">
+                <div class="gsi-material-button-icon">
+                  <img src="assets/images/icon_google.svg" alt="google icon">
+                </div>
+                <span style="display: none">Sign in with Google</span>
+              </div>
+            </button>
+
+          </div>
+        <div class="hamburger">
+          <label for="hamburger-toggle">
+            <input type="checkbox" id="hamburger-toggle" />
+            <div class="hamburger-slices">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="menu">
+              <a href="#"><li>Home</li></a>
+              <a href="#"><li>Rewards</li></a>
+              <a href="#"><li>Legal</li></a>
+              <a href="#"><li>Hire Me!</li></a>
+              <a href="#" id="signout"><li>Log Out</li></a>
+            </ul>
+          </label>
+        </div>
+      </nav>
+    </header>
+    <!-- the page technnically doesn't have any main content, but we can use it for the hero section -->
+    <main>
+      <section class="flex-1 h-full">
+        <div class="cta">
+          <h1>Let Us Bring You To</h1>
+          <p>
+            Trusted by 80 million Travelers. TripHunter has wide network of
+            Travel Organizers, Local People, and Government Insiders. We are
+            ready to take you to every dream destination you have.
+          </p>
+          <form action="#">
+            <div class="search">
+              <img
+                src="assets/images/mdi_location.svg"
+                alt="location icon"
+                class="location-icon"
+              />
+
+              <input
+                type="text"
+                name="destination"
+                placeholder="City, Destination, or Hotel Name"
+                class="destination-name"
+              />
+              <input
+                type="text"
+                name="date"
+                placeholder="When"
+                class="trip-time"
+              />
+              <input
+                type="number"
+                name="count"
+                placeholder="1 Person"
+                class="trip-number"
+              />
+              <button type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                >
+                  <path
+                    d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2938 12.5697 16.0025 10.8204 16 9C16 5.133 12.867 2 9 2C5.133 2 2 5.133 2 9C2 12.867 5.133 16 9 16C10.8204 16.0025 12.5697 15.2938 13.875 14.025L14.025 13.875Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="book-target">
+              <input type="radio" name="book-target" value="me" id="for-me" />
+              <label for="for-me">book for me</label>
+
+              <input
+                type="radio"
+                name="book-target"
+                value="someone-else"
+                id="for-someone-else"
+              />
+              <label for="for-someone-else">book for someone else</label>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="scroll-down">
+        <p>scroll down</p>
+        <img src="assets/images/scroll_down.svg" alt="scroll down icon" />
+      </section>
+    </main>
+
+    <article class="filter">
+      <section class="form">
+        <header class="margin-0 padding-0">
+          <h3>Filters</h3>
+          <a class="reset" href="#">Reset</a>
+        </header>
+
+        <form action="#">
+          <div class="form-item">
+            <label for="price-from">Price</label>
+            <div class="input-group">
+              <input
+                type="text"
+                id="price-from"
+                name="price-from"
+                placeholder="From"
+              />
+              <input
+                type="text"
+                id="price-to"
+                name="price-to"
+                placeholder="To"
+              />
+            </div>
+          </div>
+
+          <div class="form-item">
+            <label for="type">Property Type</label>
+            <div class="property-selector">
+              <select name="property-type" value="penthouse" id="type">
+                <option value="penthouse">Penthouse</option>
+                <option value="cottages">Cottages</option>
+                <option value="camping-ground">Camping Ground</option>
+                <option value="hotel">Hotel</option>
+                <option value="shared-room">Shared Room (Basecamp)</option>
+              </select>
+              <img
+                src="assets/images/icon_caret_down.svg"
+                alt="select caret down"
+              />
+            </div>
+          </div>
+
+          <div class="form-item">
+            <label>conveniences</label>
+            <div class="toggle-tags">
+              <div class="tag">
+                <input
+                  type="checkbox"
+                  id="tv"
+                  name="conveniences"
+                  value="tv"
+                  checked
+                />
+                <label for="tv">
+                  <img src="assets/images/tag_tv.svg" alt="tv icon" />
+                  <span>TV</span>
+                </label>
+              </div>
+
+              <div class="tag">
+                <input
+                  type="checkbox"
+                  id="disabled-access"
+                  name="conveniences"
+                  value="disabled-access"
+                />
+                <label for="disabled-access">
+                  <img
+                    src="assets/images/tag_disabled.svg"
+                    alt="disabled icon"
+                  />
+                  <span>Disabled Access</span>
+                </label>
+              </div>
+
+              <div class="tag">
+                <input
+                  type="checkbox"
+                  id="in-the-woods"
+                  name="conveniences"
+                  value="in-the-woods"
+                />
+                <label for="in-the-woods">
+                  <img src="assets/images/tag_trees.svg" alt="trees icon" />
+                  <span>In The Woods</span>
+                </label>
+              </div>
+
+              <div class="tag">
+                <input
+                  type="checkbox"
+                  id="hot-tubs"
+                  name="conveniences"
+                  value="hot-tubs"
+                />
+                <label for="hot-tubs">
+                  <img src="assets/images/tag_hot_tub.svg" alt="hot tub icon" />
+                  <span>Hot Tubs</span>
+                </label>
+              </div>
+
+              <div class="tag">
+                <input
+                  type="checkbox"
+                  id="views"
+                  name="conveniences"
+                  value="views"
+                />
+                <label for="views">
+                  <img src="assets/images/tag_mountain.svg" alt="views icon" />
+                  <span>Views</span>
+                </label>
+              </div>
+
+              <div class="tag">
+                <input
+                  type="checkbox"
+                  id="lake-and-rivers"
+                  name="conveniences"
+                  value="lake-and-rivers"
+                />
+                <label for="lake-and-rivers">
+                  <img
+                    src="assets/images/tag_rivers.svg"
+                    alt="lake and rivers icon"
+                  />
+                  <span>Lake and Rivers</span>
+                </label>
+              </div>
+
+              <div class="tag">
+                <input
+                  type="checkbox"
+                  id="wifi"
+                  name="conveniences"
+                  value="wifi"
+                />
+                <label for="wifi">
+                  <img src="assets/images/tag_wifi.svg" alt="wifi icon" />
+                  <span>WiFi</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <label for="guest-count">Number of guests</label>
+            <div class="input-number-with-buttons">
+              <button type="button" class="decrement">-</button>
+
+              <input
+                type="text"
+                id="guest-count"
+                name="guest-count"
+                value="1"
+              />
+              <button type="button" class="increment">+</button>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <div class="cancellation-fee">
+              <div class="cancellation-fee-option">
+                <input
+                  type="radio"
+                  id="without-cancellation-fee"
+                  name="cancellation-fee"
+                  value="without-cancellation-fee"
+                  checked
+                />
+                <label for="without-cancellation-fee">Free Cancellation</label>
+              </div>
+
+              <div class="cancellation-fee-option">
+                <input
+                  type="radio"
+                  id="with-cancellation-fee"
+                  name="cancellation-fee"
+                  value="with-cancellation-fee"
+                />
+                <label for="with-cancellation-fee">With Cancellation Fee</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">Apply</button>
+        </form>
+      </section>
+
+      <section class="result">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8400.959368291742!2d-1.503263962668368!3d53.68453373889008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1730357769013!5m2!1sen!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="list">
+          <figure>
+            <img
+              src="assets/images/woldsend_cottage.png"
+              alt="woldsend cottage"
+            />
+            <figcaption>Woldsend Cottages</figcaption>
+            <small>
+              <img src="assets/images/icon_location.svg" alt="location icon" />
+              <span>Wakefield Council, England</span>
+            </small>
+
+            <div class="price">
+              <p class="value">$90</p>
+              <p class="unit">/night</p>
+            </div>
+          </figure>
+
+          <figure>
+            <img
+              src="assets/images/cliff_house_cottage.png"
+              alt="cliffhouse cottages"
+            />
+            <figcaption>Cliffhouse Cottages</figcaption>
+            <small>
+              <img src="assets/images/icon_location.svg" alt="location icon" />
+              <span>Wakefield Council, England</span>
+            </small>
+
+            <div class="price">
+              <p class="value">$72</p>
+              <p class="unit">/night</p>
+            </div>
+          </figure>
+
+          <figure>
+            <img
+              src="assets/images/fox_rabbit_cottage.png"
+              alt="fox & rabbit cottages"
+            />
+            <figcaption>Fox & Rabbit Cottages</figcaption>
+            <small>
+              <img src="assets/images/icon_location.svg" alt="location icon" />
+              <span>Wakefield Council, England</span>
+            </small>
+
+            <div class="price">
+              <p class="value">$36</p>
+              <p class="unit">/night</p>
+            </div>
+          </figure>
+          <figure>
+            <img
+              src="assets/images/hillside_cottage.png"
+              alt="hillside cottage"
+            />
+            <figcaption>Hillside Cottages</figcaption>
+            <small>
+              <img src="assets/images/icon_location.svg" alt="location icon" />
+              <span>Wakefield Council, England</span>
+            </small>
+
+            <div class="price">
+              <p class="value">$123</p>
+              <p class="unit">/night</p>
+            </div>
+          </figure>
+
+          <figure>
+            <img
+              src="assets/images/triangle_cottage.png"
+              alt="triangle cottage"
+            />
+            <figcaption>Triangle Cottages</figcaption>
+            <small>
+              <img src="assets/images/icon_location.svg" alt="location icon" />
+              <span>Wakefield Council, England</span>
+            </small>
+
+            <div class="price">
+              <p class="value">$216</p>
+              <p class="unit">/night</p>
+            </div>
+          </figure>
+        </div>
+      </section>
+    </article>
+
+    <article class="bottom">
+      <section class="subscribe">
+        <h3>Stay Connected</h3>
+        <p>
+          Join over 10.000 travelers around the world to receive weekly travel
+          updates!
+        </p>
+        <form action="#">
+          <input type="email" name="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <section class="comment">
+        <h3>Leave us a message</h3>
+        <p>
+          Got feedbacks, issue, or want to share your experiences, send them to
+          us, we'll reach you as quick as we can!
+        </p>
+        <form action="#">
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <section class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Hire Me!</a></li>
+        </ul>
+      </section>
+
+      <section class="social">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="assets/images/icon_facebook.svg" alt="facebook icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/images/icon_x.svg" alt="twitter icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/images/icon_instagram.svg" alt="instagram icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/images/icon_linkedin.svg" alt="linkedin icon"
+            /></a>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <footer>
+      <div class="detail">
+        <p>TripHunter, Inc.</p>
+        <p>Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930</p>
+        <p>Main (021) 333 4444</p>
+        <p>Support (021) 555 6666</p>
+      </div>
+      <nav>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+        <p>&copy; 2024 TripHunter. All Rights Reserved.</p>
+      </nav>
+    </footer>
+    <script type="module" src="assets/scripts/auth.js"></script>
+  </body>
+</html>
