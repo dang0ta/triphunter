@@ -34,11 +34,11 @@ Open [this](https://module-1-dang0ta.vercel.app/) link for the live version of t
 
 
 ### Module 2
-- [ ]  apply custom font-face
-- [ ]  ensure there's text-shadow on some texts, and list-style on some list.
-- [ ]  ensure there's at least 1 background image, using either cover or contain.
+- [x]  apply custom font-face
+- [x]  ensure there's text-shadow on some texts, and list-style on some list.
+- [x]  ensure there's at least 1 background image, using either cover or contain.
 - [ ]  apply asymetric grid somewhere in the page.
-- [ ]  ensure there's animate-based and transition-based animation on the page.
+- [x]  ensure there's animate-based and transition-based animation on the page.
 - [ ]  add technical documentation.
 - [ ]  add deployment, custom domain, and configuration documentation to the Readme.
 - [ ]  deploy the page to the internet using custom domain.
