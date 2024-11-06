@@ -46,8 +46,6 @@ main {
   header {
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    top: 2em;
     height: 1rem;
     padding: 0 2rem;
   }
