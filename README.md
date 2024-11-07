@@ -9,7 +9,7 @@ If you find any issue or have any feedback for the web page, feel free to submit
 Cheers 🍻
 
 ## Live Website
-Open [this](https://module-1-dang0ta.vercel.app/) link for the live version of this project.
+Open [this](https://dang0ta.github.io/triphunter/) link for the live version of this project.
 
 ## Assignment Checklist
 
