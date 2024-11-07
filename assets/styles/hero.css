@@ -15,7 +15,7 @@ main {
     flex-direction: column;
   }
 
-  nav {
+  main nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -42,11 +42,14 @@ main {
     text-decoration: underline;
   }
 
-  header {
+  main header {
     display: flex;
     justify-content: space-between;
-    height: 1rem;
-    padding: 0 2rem;
+    padding:0;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
   }
 
   header .logo {

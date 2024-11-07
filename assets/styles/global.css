@@ -9,6 +9,21 @@ h1, h2, h3, h4, h5, p, figure, section, article, ul, li, a {
     padding: 0;
 }
 
+h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+header {
+    position: sticky;
+    top: 1rem;
+    z-index: 1;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
 body, html {
     height: 100%;
     font-family: "Inter", sans-serif;

@@ -8,38 +8,37 @@
     <link rel="stylesheet" href="assets/styles/global.css" />
     <link rel="stylesheet" href="assets/styles/hero.css" />
     <link rel="stylesheet" href="assets/styles/hamburger.css" />
+    <link rel="stylesheet" href="assets/styles/gallery.css" />
     <link rel="stylesheet" href="assets/styles/filters.css" />
     <link rel="stylesheet" href="assets/styles/bottom.css" />
     <link rel="stylesheet" href="assets/styles/footer.css" />
-    
   </head>
   <body>
-    
     <!-- the page technnically doesn't have any main content, but we can use it for the hero section -->
     <main>
-        <header>
-            <div class="logo">TripHunter</div>
-            
-            <nav role="navigation">
-              <div class="hamburger">
-                <label for="hamburger-toggle">
-                  <input type="checkbox" id="hamburger-toggle" />
-                  <div class="hamburger-slices">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <ul class="menu">
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>Rewards</li></a>
-                    <a href="#"><li>Legal</li></a>
-                    <a href="#"><li>Hire Me!</li></a>
-                    <a href="#" id="signout"><li>Log Out</li></a>
-                  </ul>
-                </label>
+      <header>
+        <div class="logo">TripHunter</div>
+
+        <nav role="navigation">
+          <div class="hamburger">
+            <label for="hamburger-toggle">
+              <input type="checkbox" id="hamburger-toggle" />
+              <div class="hamburger-slices">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-            </nav>
-          </header>
+              <ul class="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>Rewards</li></a>
+                <a href="#"><li>Legal</li></a>
+                <a href="#"><li>Hire Me!</li></a>
+                <a href="#" id="signout"><li>Log Out</li></a>
+              </ul>
+            </label>
+          </div>
+        </nav>
+      </header>
       <section class="flex-1 h-full">
         <div class="cta">
           <h1>Let Us Bring You To</h1>
@@ -111,9 +110,149 @@
       </section>
     </main>
 
+    <article class="gallery">
+      <header>
+        <h3>Popular Destinations</h3>
+      </header>
+      <section>
+        <div class="card">
+            <figure>
+              <img
+                class="thumbnail"
+                src="https://images.unsplash.com/photo-1581010864468-c972b8705439?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt="Eiffel Tower"
+              />
+  
+              <figcaption>
+                <h2>Paris</h2>
+                <p>Eiffel Tower</p>
+                <span>
+                  <img
+                    src="assets/images/star.svg"
+                    alt="star icon"
+                    class="star"
+                  />
+                  5
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        <div class="card">
+          <figure>
+            <img
+              class="thumbnail"
+              src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+              alt="Big Ben"
+            />
+
+            <figcaption>
+              <h2>London</h2>
+              <p>Big Ben</p>
+              <span>
+                <img
+                  src="assets/images/star.svg"
+                  alt="star icon"
+                  class="star"
+                />
+                4.5
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="card">
+          <figure>
+            <img
+              class="thumbnail"
+              src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1096&q=80"
+              alt="Colosseum"
+            />
+            <figcaption>
+              <h2>Rome</h2>
+              <p>Colosseum</p>
+
+              <span
+                ><img
+                  src="assets/images/star.svg"
+                  alt="star icon"
+                  class="star"
+                />
+                4.7
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="card">
+          <figure>
+            <img
+              class="thumbnail"
+              src="https://images.unsplash.com/photo-1581473483413-313a5afffb08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80"
+              alt="Pisa Tower"
+            />
+            <figcaption>
+              <h2>Pisa</h2>
+              <p>Pisa Tower</p>
+
+              <span
+                ><img
+                  src="assets/images/star.svg"
+                  alt="star icon"
+                  class="star"
+                />
+                4.3
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="card">
+          <figure>
+            <img
+              class="thumbnail"
+              src="https://images.unsplash.com/photo-1585155967849-91c736589c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+              alt=""
+            />
+            <figcaption>
+              <h2>New York</h2>
+              <p>Statue of Liberty</p>
+              <span
+                ><img
+                  src="assets/images/star.svg"
+                  alt="star icon"
+                  class="star"
+                />
+                4.8
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="card">
+          <figure>
+            <img
+              class="thumbnail"
+              src="https://images.unsplash.com/photo-1527915676329-fd5ec8a12d4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+              alt="Sydney Opera House"
+            />
+
+            <figcaption>
+              <h2>Sydney</h2>
+              <p>Sydney Opera House</p>
+              <span>
+                <img
+                  src="assets/images/star.svg"
+                  alt="star icon"
+                  class="star"
+                />
+                5
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </article>
+
     <article class="filter">
       <section class="form">
-        <header class="margin-0 padding-0">
+        <header>
           <h3>Filters</h3>
           <a class="reset" href="#">Reset</a>
         </header>

@@ -4,10 +4,6 @@ article.filter {
     gap: 2rem;
 }
 
-article.filter h3 {
-    font-size: 1.25rem;
-    font-weight: 800;
-}
 
 article.filter a.reset {
     font-size: .75rem;
@@ -29,15 +25,12 @@ article.filter .form header {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    position: relative;
-    height: 1rem;
 }
 
 article.filter .form form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 3rem;
 }
 
 article.filter .form-item {
