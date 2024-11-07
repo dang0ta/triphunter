@@ -53,3 +53,7 @@ Open [this](https://dang0ta.github.io/triphunter/) link for the live version of 
 
 ## Disclaimer
 The beautiful header background image is from [Unsplash](https://unsplash.com/photos/man-taking-photo-of-hot-air-balloons-eOcyhe5-9sQ), all credits for the image goes to [Mesut Kaya](https://unsplash.com/@directormesut).
+
+
+The Eiffel Tower image on Gallery section is from [Dan Novac](https://unsplash.com/photos/eiffel-tower-paris-france-uREibJ6RUfQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash), and [Adam Birkett](https://unsplash.com/photos/eiffel-tower-2iDY8tC6oRk?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/).
+
