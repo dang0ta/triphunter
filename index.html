@@ -116,28 +116,34 @@
       </header>
       <section>
         <div class="card">
-            <figure>
+          <figure>
+            <picture>
+                <!-- we use portrait image on wide screen, and square image on other -->
+              <source
+                srcset="assets/images/gallery/eiffel-square.jpg"
+                media="(max-width:768px)"
+              />
               <img
                 class="thumbnail"
-                srcset="assets/images/gallery/eiffel-narrow.jpg 420w, assets/images/gallery/eiffel-wide.jpg 768w"                
-                src="/assets/images/gallery/eiffel-wide.jpg"
+                src="/assets/images/gallery/eiffel-portrait.jpg"
                 alt="Eiffel Tower"
               />
-  
-              <figcaption>
-                <h2>Paris</h2>
-                <p>Eiffel Tower</p>
-                <span>
-                  <img
-                    src="assets/images/star.svg"
-                    alt="star icon"
-                    class="star"
-                  />
-                  5
-                </span>
-              </figcaption>
-            </figure>
-          </div>
+            </picture>
+
+            <figcaption>
+              <h2>Paris</h2>
+              <p>Eiffel Tower</p>
+              <span>
+                <img
+                  src="assets/images/star.svg"
+                  alt="star icon"
+                  class="star"
+                />
+                5
+              </span>
+            </figcaption>
+          </figure>
+        </div>
         <div class="card">
           <figure>
             <img
@@ -160,7 +166,7 @@
             </figcaption>
           </figure>
         </div>
-        
+
         <div class="card">
           <figure>
             <img
