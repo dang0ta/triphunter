@@ -4,553 +4,358 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hunt your next Trip!</title>
-    <base href="https://dang0ta.github.io/triphunter/">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-    <link rel="stylesheet" href="assets/styles/global.css" />
-    <link rel="stylesheet" href="assets/styles/hero.css" />
-    <link rel="stylesheet" href="assets/styles/hamburger.css" />
-    <link rel="stylesheet" href="assets/styles/gallery.css" />
-    <link rel="stylesheet" href="assets/styles/filters.css" />
-    <link rel="stylesheet" href="assets/styles/bottom.css" />
-    <link rel="stylesheet" href="assets/styles/footer.css" />
-    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <!-- the page technnically doesn't have any main content, but we can use it for the hero section -->
-    <main>
-      <header>
-        <div class="logo">TripHunter</div>
+    <section class="modal" id="search-modal">
+      <a class="modal-bg-closer" href="#"></a>
 
-        <nav role="navigation">
-          <div class="hamburger">
-            <label for="hamburger-toggle">
-              <input type="checkbox" id="hamburger-toggle" />
-              <div class="hamburger-slices">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <ul class="menu">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>Rewards</li></a>
-                <a href="#"><li>Legal</li></a>
-                <a href="#"><li>Hire Me!</li></a>
-                <a href="#" id="signout"><li>Log Out</li></a>
-              </ul>
-            </label>
+      <div class="container">
+        <form action="#">
+          <div class="search-main">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M21 20.9926L16.657 16.6496M16.657 16.6496C17.3999 15.9067 17.9892 15.0248 18.3912 14.0541C18.7933 13.0835 19.0002 12.0432 19.0002 10.9926C19.0002 9.94197 18.7933 8.90166 18.3913 7.93103C17.9892 6.9604 17.3999 6.07846 16.657 5.33558C15.9141 4.59269 15.0322 4.0034 14.0616 3.60135C13.0909 3.1993 12.0506 2.99237 11 2.99237C9.94942 2.99237 8.90911 3.1993 7.93848 3.60135C6.96785 4.0034 6.08591 4.59269 5.34302 5.33558C3.84269 6.83591 2.99982 8.87079 2.99982 10.9926C2.99982 13.1144 3.84269 15.1492 5.34302 16.6496C6.84335 18.1499 8.87824 18.9928 11 18.9928C13.1218 18.9928 15.1567 18.1499 16.657 16.6496Z"
+                stroke="#333333"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              type="text"
+              name="destination-name"
+              id="destination-name"
+              placeholder="search destinations ..."
+            />
+            <button type="submit">search</button>
           </div>
-        </nav>
-      </header>
-      <section class="flex-1 h-full">
-        <div class="cta">
-          <h1>Let Us Bring You To</h1>
-          <p>
-            Trusted by 80 million Travelers. TripHunter has wide network of
-            Travel Organizers, Local People, and Government Insiders. We are
-            ready to take you to every dream destination you have.
-          </p>
-          <form action="#">
-            <div class="search">
-              <img
-                src="assets/images/mdi_location.svg"
-                alt="location icon"
-                class="location-icon"
-              />
 
+          <div class="search-category">
+            <p>What kind of trip you looking for?</p>
+            <div class="category-group">
               <input
-                type="text"
-                name="destination"
-                placeholder="City, Destination, or Hotel Name"
-                class="destination-name"
+                type="radio"
+                name="trip-type"
+                id="hike"
+                value="hike"
+                checked
               />
-              <input
-                type="text"
-                name="date"
-                placeholder="When"
-                class="trip-time"
-              />
-              <input
-                type="number"
-                name="count"
-                placeholder="1 Person"
-                class="trip-number"
-              />
-              <button type="submit">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="21"
-                  viewBox="0 0 21 21"
-                  fill="none"
-                >
-                  <path
-                    d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2938 12.5697 16.0025 10.8204 16 9C16 5.133 12.867 2 9 2C5.133 2 2 5.133 2 9C2 12.867 5.133 16 9 16C10.8204 16.0025 12.5697 15.2938 13.875 14.025L14.025 13.875Z"
-                    fill="white"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <div class="book-target">
-              <input type="radio" name="book-target" value="me" id="for-me" />
-              <label for="for-me">book for me</label>
+              <label for="hike">Hike</label>
 
               <input
                 type="radio"
-                name="book-target"
-                value="someone-else"
-                id="for-someone-else"
+                name="trip-type"
+                id="romantic"
+                value="romantic"
               />
-              <label for="for-someone-else">book for someone else</label>
+              <label for="romantic">Romantic</label>
+
+              <input type="radio" name="trip-type" id="fancy" value="fancy" />
+              <label for="fancy">Fancy</label>
+
+              <input
+                type="radio"
+                name="trip-type"
+                id="historical"
+                value="historical"
+              />
+              <label for="historical">Historical</label>
+
+              <input
+                type="radio"
+                name="trip-type"
+                id="addrenaline"
+                value="addrenaline"
+              />
+              <label for="addrenaline">Addrenaline Hunt</label>
             </div>
-          </form>
+          </div>
+
+          <div class="recent">
+            <p>Recent Searches</p>
+
+            <div class="recent-items">
+              <div class="recent-item">
+                <img src="assets/icons/hike.svg" alt="hike icon" />
+                <div class="description">
+                  <h3>Mount Rinjani</h3>
+                  <p>
+                    4+ days hike to the most beautiful peak on east Indonesia
+                  </p>
+                </div>
+              </div>
+
+              <div class="recent-item">
+                <img src="assets/icons/fire.svg" alt="fire (adrenaline) icon" />
+                <div class="description">
+                  <h3>Gili Trawangan Bungee Jumping</h3>
+                  <p>The best Bungee Jumping spot in Indonesia</p>
+                </div>
+              </div>
+
+              <div class="recent-item">
+                <img src="assets/icons/scuba.svg" alt="hike icon" />
+                <div class="description">
+                  <h3>Raja Ampat</h3>
+                  <p>Scuba dive in the world-famous marine wildlife habitat</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="footer"></div>
+      </div>
+    </section>
+
+    <main>
+      <header>
+        <h1>TripHunter</h1>
+        <a class="search" href="#search-modal">
+          <span>search destinations</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M21 20.9926L16.657 16.6496M16.657 16.6496C17.3999 15.9067 17.9892 15.0248 18.3912 14.0541C18.7933 13.0835 19.0002 12.0432 19.0002 10.9926C19.0002 9.94197 18.7933 8.90166 18.3913 7.93103C17.9892 6.9604 17.3999 6.07846 16.657 5.33558C15.9141 4.59269 15.0322 4.0034 14.0616 3.60135C13.0909 3.1993 12.0506 2.99237 11 2.99237C9.94942 2.99237 8.90911 3.1993 7.93848 3.60135C6.96785 4.0034 6.08591 4.59269 5.34302 5.33558C3.84269 6.83591 2.99982 8.87079 2.99982 10.9926C2.99982 13.1144 3.84269 15.1492 5.34302 16.6496C6.84335 18.1499 8.87824 18.9928 11 18.9928C13.1218 18.9928 15.1567 18.1499 16.657 16.6496Z"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </header>
+      <section class="hero">
+        <div class="title">
+          <h1>Mount Rinjani</h1>
+
+          <div class="subtitle">
+            <div class="scroll-down">
+                <img src="assets/icons/scroll_down.svg" alt="scroll down icon" />
+              </div>
+                <p class="small">
+                    Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    vulputate libero et velit interdum, ac aliquet odio mattis.
+                </p>
+          </div>
         </div>
-      </section>
-      <section class="scroll-down">
-        <p>scroll down</p>
-        <img src="assets/images/scroll_down.svg" alt="scroll down icon" />
+        <div class="extra">
+          <div class="recommendation">
+            <div class="user-group">
+              <img src="assets/users/user-3.png" alt="user-3" />
+              <img src="assets/users/user-2.png" alt="user-2" />
+              <img src="assets/users/user-1.png" alt="user-1" />
+            </div>
+            <div class="description">
+              <p>40+ Recommended this destination</p>
+              <p class="small">read their stories</p>
+            </div>
+
+            <div class="description smallscreen">
+              <p>40+ Recommendations</p>
+            </div>
+          </div>
+
+          <div class="labels">
+            <span class="label">Active Volcano</span>
+            <span class="label">4+ Days</span>
+            <span class="label">Difficult Hike</span>
+            <span class="label">Guide Required</span>
+          </div>
+        </div>
       </section>
     </main>
 
-    <article class="gallery">
-      <header>
-        <h3>Popular Destinations</h3>
-      </header>
-      <section>
-        <div class="card">
-          <figure>
-            <picture>
-                <!-- we use portrait image on wide screen, and square image on other -->
-              <source
-                srcset="assets/images/gallery/eiffel-square.jpg"
-                media="(max-width:768px)"
-              />
-              <img
-                class="thumbnail"
-                src="assets/images/gallery/eiffel-portrait.jpg"
-                alt="Eiffel Tower"
-              />
-            </picture>
+    <section class="tab">
+      <div class="tab-main">
+        <input
+          type="radio"
+          name="tab-item-selector"
+          id="guide"
+          value="guide"
+          checked
+        />
+        <a href="#guide">
+          <label for="guide"> Hiking Guide </label>
+        </a>
 
-            <figcaption>
-              <h2>Paris</h2>
-              <p>Eiffel Tower</p>
-              <span>
-                <img
-                  src="assets/images/star.svg"
-                  alt="star icon"
-                  class="star"
-                />
-                5
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="card">
-          <figure>
-            <img
-              class="thumbnail"
-              src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
-              alt="Big Ben"
-            />
+        <input
+          type="radio"
+          name="tab-item-selector"
+          id="best-time-to-visit"
+          value="best-time-to-visit"
+        />
+        <a href="#best-time-to-visit">
+          <label for="best-time-to-visit"> Best Time to visit </label>
+        </a>
 
-            <figcaption>
-              <h2>London</h2>
-              <p>Big Ben</p>
-              <span>
-                <img
-                  src="assets/images/star.svg"
-                  alt="star icon"
-                  class="star"
-                />
-                4.5
-              </span>
-            </figcaption>
-          </figure>
-        </div>
+        <input
+          type="radio"
+          name="tab-item-selector"
+          id="gallery"
+          value="gallery"
+        />
+        <a href="#gallery">
+          <label for="gallery"> Gallery </label>
+        </a>
+      </div>
 
-        <div class="card">
-          <figure>
-            <img
-              class="thumbnail"
-              src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1096&q=80"
-              alt="Colosseum"
-            />
-            <figcaption>
-              <h2>Rome</h2>
-              <p>Colosseum</p>
+      <div class="tab-extra">
+        <h2>customize your trip</h2>
+      </div>
+    </section>
 
-              <span
-                ><img
-                  src="assets/images/star.svg"
-                  alt="star icon"
-                  class="star"
-                />
-                4.7
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="card">
-          <figure>
-            <img
-              class="thumbnail"
-              src="https://images.unsplash.com/photo-1581473483413-313a5afffb08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80"
-              alt="Pisa Tower"
-            />
-            <figcaption>
-              <h2>Pisa</h2>
-              <p>Pisa Tower</p>
+    <div class="with-article-wrapper">
+      <section class="hike-guide with-article" id="guide">
+        <div class="article-group">
+          <article>
+            <h2>Mount Rinjani Hike Guide</h2>
+            <p>
+              Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+              feugiat lectus. Class aptent taciti sociosqu ad litora torquent
+              per conubia nostra, per inceptos himenaeos. Praesent auctor purus
+              luctus enim egestas, ac scelerisque ante pulvinar. Donec ut
+              rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur
+              vel bibendum lorem. Morbi convallis convallis diam sit amet
+              lacinia. Aliquam in elementum tellus.
+            </p>
+            <span class="more">read more</span>
+          </article>
 
-              <span
-                ><img
-                  src="assets/images/star.svg"
-                  alt="star icon"
-                  class="star"
-                />
-                4.3
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="card">
-          <figure>
-            <img
-              class="thumbnail"
-              src="https://images.unsplash.com/photo-1585155967849-91c736589c84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
-              alt=""
-            />
-            <figcaption>
-              <h2>New York</h2>
-              <p>Statue of Liberty</p>
-              <span
-                ><img
-                  src="assets/images/star.svg"
-                  alt="star icon"
-                  class="star"
-                />
-                4.8
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="card">
-          <figure>
-            <img
-              class="thumbnail"
-              src="https://images.unsplash.com/photo-1527915676329-fd5ec8a12d4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
-              alt="Sydney Opera House"
-            />
-
-            <figcaption>
-              <h2>Sydney</h2>
-              <p>Sydney Opera House</p>
-              <span>
-                <img
-                  src="assets/images/star.svg"
-                  alt="star icon"
-                  class="star"
-                />
-                5
-              </span>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-    </article>
-
-    <article class="filter">
-      <section class="form">
-        <header>
-          <h3>Filters</h3>
-          <a class="reset" href="#">Reset</a>
-        </header>
-
-        <form action="#">
-          <div class="form-item">
-            <label for="price-from">Price</label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="price-from"
-                name="price-from"
-                placeholder="From"
-              />
-              <input
-                type="text"
-                id="price-to"
-                name="price-to"
-                placeholder="To"
-              />
+          <div class="quick-actions">
+            <img src="assets/icons/location.svg" alt="location icon" />
+            <div class="description">
+              <h3>Book your journey now</h3>
+              <p>explore the majestic Mount Rinjani</p>
             </div>
+            <button>book package</button>
           </div>
+        </div>
 
-          <div class="form-item">
-            <label for="type">Property Type</label>
-            <div class="property-selector">
-              <select name="property-type" value="penthouse" id="type">
-                <option value="penthouse">Penthouse</option>
-                <option value="cottages">Cottages</option>
-                <option value="camping-ground">Camping Ground</option>
-                <option value="hotel">Hotel</option>
-                <option value="shared-room">Shared Room (Basecamp)</option>
-              </select>
-              <img
-                src="assets/images/icon_caret_down.svg"
-                alt="select caret down"
-              />
+        <aside>
+          <h2>quick facts</h2>
+          <div class="items">
+            <div class="item">
+              <img src="assets/icons/calendar.svg" alt="calendar icon" />
+              <div class="description">
+                <h3>best time to visit</h3>
+                <p>September - February</p>
+              </div>
             </div>
-          </div>
-
-          <div class="form-item">
-            <label>conveniences</label>
-            <div class="toggle-tags">
-              <div class="tag">
-                <input
-                  type="checkbox"
-                  id="tv"
-                  name="conveniences"
-                  value="tv"
-                  checked
-                />
-                <label for="tv">
-                  <img src="assets/images/tag_tv.svg" alt="tv icon" />
-                  <span>TV</span>
-                </label>
+            <div class="item">
+              <img src="assets/icons/duration.svg" alt="duration icon" />
+              <div class="description">
+                <h3>hike duration</h3>
+                <p>4 - 7 days</p>
               </div>
-
-              <div class="tag">
-                <input
-                  type="checkbox"
-                  id="disabled-access"
-                  name="conveniences"
-                  value="disabled-access"
-                />
-                <label for="disabled-access">
-                  <img
-                    src="assets/images/tag_disabled.svg"
-                    alt="disabled icon"
-                  />
-                  <span>Disabled Access</span>
-                </label>
+            </div>
+            <div class="item">
+              <img src="assets/icons/hike.svg" alt="hike icon" />
+              <div class="description">
+                <h3>beginner friendliness</h3>
+                <p>not beginner friendly</p>
               </div>
-
-              <div class="tag">
-                <input
-                  type="checkbox"
-                  id="in-the-woods"
-                  name="conveniences"
-                  value="in-the-woods"
-                />
-                <label for="in-the-woods">
-                  <img src="assets/images/tag_trees.svg" alt="trees icon" />
-                  <span>In The Woods</span>
-                </label>
-              </div>
-
-              <div class="tag">
-                <input
-                  type="checkbox"
-                  id="hot-tubs"
-                  name="conveniences"
-                  value="hot-tubs"
-                />
-                <label for="hot-tubs">
-                  <img src="assets/images/tag_hot_tub.svg" alt="hot tub icon" />
-                  <span>Hot Tubs</span>
-                </label>
-              </div>
-
-              <div class="tag">
-                <input
-                  type="checkbox"
-                  id="views"
-                  name="conveniences"
-                  value="views"
-                />
-                <label for="views">
-                  <img src="assets/images/tag_mountain.svg" alt="views icon" />
-                  <span>Views</span>
-                </label>
-              </div>
-
-              <div class="tag">
-                <input
-                  type="checkbox"
-                  id="lake-and-rivers"
-                  name="conveniences"
-                  value="lake-and-rivers"
-                />
-                <label for="lake-and-rivers">
-                  <img
-                    src="assets/images/tag_rivers.svg"
-                    alt="lake and rivers icon"
-                  />
-                  <span>Lake and Rivers</span>
-                </label>
-              </div>
-
-              <div class="tag">
-                <input
-                  type="checkbox"
-                  id="wifi"
-                  name="conveniences"
-                  value="wifi"
-                />
-                <label for="wifi">
-                  <img src="assets/images/tag_wifi.svg" alt="wifi icon" />
-                  <span>WiFi</span>
-                </label>
+            </div>
+            <div class="item">
+              <img src="assets/icons/temperature.svg" alt="temperature icon" />
+              <div class="description">
+                <h3>Temperature range</h3>
+                <p>24°C to -4°C</p>
               </div>
             </div>
           </div>
 
-          <div class="form-item">
-            <label for="guest-count">Number of guests</label>
-            <div class="input-number-with-buttons">
-              <button type="button" class="decrement">-</button>
-
-              <input
-                type="text"
-                id="guest-count"
-                name="guest-count"
-                value="1"
-              />
-              <button type="button" class="increment">+</button>
+          <div class="map-link">
+            <img src="assets/icons/map.svg" alt="map icon" />
+            <div class="description">
+              <h3>view on map</h3>
+              <p>Mount Rinjani, Lombok, Indonesia</p>
             </div>
           </div>
-
-          <div class="form-item">
-            <div class="cancellation-fee">
-              <div class="cancellation-fee-option">
-                <input
-                  type="radio"
-                  id="without-cancellation-fee"
-                  name="cancellation-fee"
-                  value="without-cancellation-fee"
-                  checked
-                />
-                <label for="without-cancellation-fee">Free Cancellation</label>
-              </div>
-
-              <div class="cancellation-fee-option">
-                <input
-                  type="radio"
-                  id="with-cancellation-fee"
-                  name="cancellation-fee"
-                  value="with-cancellation-fee"
-                />
-                <label for="with-cancellation-fee">With Cancellation Fee</label>
-              </div>
-            </div>
-          </div>
-
-          <button type="submit">Apply</button>
-        </form>
+        </aside>
       </section>
 
-      <section class="result">
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8400.959368291742!2d-1.503263962668368!3d53.68453373889008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1730357769013!5m2!1sen!2sid"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+      <section class="best-time-to-visit with-article" id="best-time-to-visit">
+        <article>
+          <h2>Best Time To Visit</h2>
+          <p>
+            Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus
+            enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
+            Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
+            lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
+            elementum tellus.
+          </p>
+          <span class="more">read more</span>
+        </article>
 
-        <div class="list">
-          <figure>
-            <img
-              src="assets/images/woldsend_cottage.png"
-              alt="woldsend cottage"
-            />
-            <figcaption>Woldsend Cottages</figcaption>
-            <small>
-              <img src="assets/images/icon_location.svg" alt="location icon" />
-              <span>Wakefield Council, England</span>
-            </small>
+        <aside>
+          <div class="header">
+            <img src="assets/icons/calendar.svg" alt="calendar icon" />
+            <h2>September - Februrary</h2>
+          </div>
 
-            <div class="price">
-              <p class="value">$90</p>
-              <p class="unit">/night</p>
-            </div>
-          </figure>
+          <div class="calendar">
+            <div class="calendar-item active">jan</div>
+            <div class="calendar-item active">feb</div>
 
-          <figure>
-            <img
-              src="assets/images/cliff_house_cottage.png"
-              alt="cliffhouse cottages"
-            />
-            <figcaption>Cliffhouse Cottages</figcaption>
-            <small>
-              <img src="assets/images/icon_location.svg" alt="location icon" />
-              <span>Wakefield Council, England</span>
-            </small>
+            <div class="calendar-item">mar</div>
 
-            <div class="price">
-              <p class="value">$72</p>
-              <p class="unit">/night</p>
-            </div>
-          </figure>
+            <div class="calendar-item">apr</div>
 
-          <figure>
-            <img
-              src="assets/images/fox_rabbit_cottage.png"
-              alt="fox & rabbit cottages"
-            />
-            <figcaption>Fox & Rabbit Cottages</figcaption>
-            <small>
-              <img src="assets/images/icon_location.svg" alt="location icon" />
-              <span>Wakefield Council, England</span>
-            </small>
+            <div class="calendar-item">may</div>
 
-            <div class="price">
-              <p class="value">$36</p>
-              <p class="unit">/night</p>
-            </div>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/hillside_cottage.png"
-              alt="hillside cottage"
-            />
-            <figcaption>Hillside Cottages</figcaption>
-            <small>
-              <img src="assets/images/icon_location.svg" alt="location icon" />
-              <span>Wakefield Council, England</span>
-            </small>
+            <div class="calendar-item">jun</div>
 
-            <div class="price">
-              <p class="value">$123</p>
-              <p class="unit">/night</p>
-            </div>
-          </figure>
+            <div class="calendar-item">jul</div>
 
-          <figure>
-            <img
-              src="assets/images/triangle_cottage.png"
-              alt="triangle cottage"
-            />
-            <figcaption>Triangle Cottages</figcaption>
-            <small>
-              <img src="assets/images/icon_location.svg" alt="location icon" />
-              <span>Wakefield Council, England</span>
-            </small>
+            <div class="calendar-item">aug</div>
 
-            <div class="price">
-              <p class="value">$216</p>
-              <p class="unit">/night</p>
-            </div>
-          </figure>
-        </div>
+            <div class="calendar-item">sep</div>
+
+            <div class="calendar-item active">oct</div>
+
+            <div class="calendar-item active">nov</div>
+
+            <div class="calendar-item active">dec</div>
+          </div>
+        </aside>
       </section>
-    </article>
+    </div>
 
-    <article class="bottom">
+    <section class="gallery" id="gallery">
+      <h2>From traveller's story</h2>
+      <div class="images">
+        <img src="assets/images/image-1.png" alt="image-1" />
+        <img src="assets/images/image-2.png" alt="image-2" />
+        <img src="assets/images/image-3.png" alt="image-3" />
+        <img src="assets/images/image-4.png" alt="image-4" />
+        <img src="assets/images/image-5.png" alt="image-5" />
+        <img src="assets/images/image-6.png" alt="image-6" />
+        <img src="assets/images/image-7.png" alt="image-7" />
+      </div>
+    </section>
+
+    <div class="bottom">
       <section class="subscribe">
         <h3>Stay Connected</h3>
         <p>
@@ -596,27 +401,25 @@
         <ul>
           <li>
             <a href="#"
-              ><img src="assets/images/icon_facebook.svg" alt="facebook icon"
+              ><img src="assets/icons/facebook.svg" alt="facebook icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/icons/x.svg" alt="twitter icon" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="assets/icons/instagram.svg" alt="instagram icon"
             /></a>
           </li>
           <li>
             <a href="#"
-              ><img src="assets/images/icon_x.svg" alt="twitter icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="assets/images/icon_instagram.svg" alt="instagram icon"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="assets/images/icon_linkedin.svg" alt="linkedin icon"
+              ><img src="assets/icons/linkedin.svg" alt="linkedin icon"
             /></a>
           </li>
         </ul>
       </section>
-    </article>
+    </div>
 
     <footer>
       <div class="detail">
