@@ -11,6 +11,11 @@ Cheers 🍻
 ## Live Website
 The website is already deplyoed on a custom domain [rkspx.dev](https://rkspx.dev). It's hosted on Netlify!
 
+## Lighthouse Score
+Last check on the live website scores 93 on Google Chrome Lighthouse, this result may vary on different machine.
+![Lighthouse Score](doc/assets/lighthouse.png)
+
+
 ## Assignment Checklist
 
 ### Module 1
@@ -43,7 +48,7 @@ The website is already deplyoed on a custom domain [rkspx.dev](https://rkspx.dev
 - [ ]  add deployment, custom domain, and configuration documentation to the Readme.
 - [x]  deploy the page to the internet using custom domain.
 - [ ]  add screenshots for each major update to the page.
-- [ ]  ensure the deployed page has at least 90 rating on Google Lighthouse.
+- [x]  ensure the deployed page has at least 90 rating on Google Lighthouse.
 - [ ]  add dark/light mode toggle.
 - [x]  create non-JS image carousel.
 
