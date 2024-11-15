@@ -9,7 +9,7 @@ If you find any issue or have any feedback for the web page, feel free to submit
 Cheers 🍻
 
 ## Live Website
-The live website is currently deployed on custom domain [rkspx.dev](https://rkspx.dev), however the SSL Propagation has not completed yet, resulting the site to be unavailable for now. In the mean time, you can access the backup deployment from this [github page](https://dang0ta.github.io/triphunter/), it shows exactly the same website.
+The website is already deplyoed on a custom domain [rkspx.dev](https://rkspx.dev). It's hosted on Netlify!
 
 ## Assignment Checklist
 
