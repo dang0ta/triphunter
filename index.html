@@ -365,13 +365,29 @@
     <section class="gallery" id="gallery">
       <h2>From traveller's story</h2>
       <div class="images">
-        <img src="assets/images/image-1.webp" alt="image-1" />
-        <img src="assets/images/image-2.webp" alt="image-2" />
-        <img src="assets/images/image-3.webp" alt="image-3" />
-        <img src="assets/images/image-4.webp" alt="image-4" />
-        <img src="assets/images/image-5.webp" alt="image-5" />
-        <img src="assets/images/image-6.webp" alt="image-6" />
-        <img src="assets/images/image-7.webp" alt="image-7" />
+        <picture>
+            <img src="assets/images/image-1.webp" alt="image-1" />
+        </picture>
+        <picture>
+            <img src="assets/images/image-2.webp" alt="image-2" />
+        </picture>
+        <picture>
+            <source media="(max-width: 768px)" srcset="assets/images/image-3-large.webp" />
+            <img src="assets/images/image-3.webp" alt="image-3" />
+        </picture>
+        <picture>
+            <source media="(max-width: 768px)" srcset="assets/images/image-4-large.webp" />
+            <img src="assets/images/image-4.webp" alt="image-4" />
+        </picture>
+        <picture>
+            <img src="assets/images/image-5.webp" alt="image-5" />
+        </picture>
+        <picture>
+            <img src="assets/images/image-6.webp" alt="image-6" />
+        </picture>
+        <picture>
+            <img src="assets/images/image-7.webp" alt="image-7" />
+        </picture>
       </div>
     </section>
 
