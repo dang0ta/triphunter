@@ -1069,6 +1069,26 @@ footer a:hover {
         display: none;
     }
 
+    section.carousel li#carousel-slide-1{
+        background: url(images/hero-bg-1-small.webp);
+         background-size: cover;
+    }
+
+    section.carousel li#carousel-slide-2{
+        background: url(images/hero-bg-2-small.webp);
+         background-size: cover;
+    }
+
+    section.carousel li#carousel-slide-3{
+        background: url(images/hero-bg-3-small.webp);
+         background-size: cover;
+    }
+
+    section.carousel li#carousel-slide-4{
+        background: url(images/hero-bg-4-small.webp);
+         background-size: cover;
+    }
+
 
 section.carousel li#carousel-slide-1,
 section.carousel li#carousel-slide-2,
