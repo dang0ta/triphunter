@@ -326,22 +326,22 @@ section.carousel li {
 }
 
 section.carousel li#carousel-slide-1 {
-    background: url(https://images.unsplash.com/photo-1698799330469-e53f68a91c08);
+    background: url(images/hero-bg-1.webp);
     background-size: cover;    
 }
 
 section.carousel li#carousel-slide-2 {
-    background: url(https://images.unsplash.com/photo-1698267703889-06c41f9acba5);
+    background: url(images/hero-bg-2.webp);
     background-size: cover;    
 }
 
 section.carousel li#carousel-slide-3 {
-    background: url(https://images.unsplash.com/photo-1621001481154-a52cbb91fcc2);
+    background: url(images/hero-bg-3.webp);
     background-size: cover;    
 }
 
 section.carousel li#carousel-slide-4 {
-    background: url(https://images.unsplash.com/photo-1621001481322-facc9cd1dae7);
+    background: url(images/hero-bg-4.webp);
     background-size: cover;    
 }
 
