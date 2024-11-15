@@ -9,7 +9,7 @@ If you find any issue or have any feedback for the web page, feel free to submit
 Cheers 🍻
 
 ## Live Website
-Open [this](https://dang0ta.github.io/triphunter/) link for the live version of this project.
+The live website is currently deployed on custom domain [rkspx.dev](https://rkspx.dev), however the SSL Propagation has not completed yet, resulting the site to be unavailable for now. In the mean time, you can access the backup deployment from this [github page](https://dang0ta.github.io/triphunter/), it shows exactly the same website.
 
 ## Assignment Checklist
 
@@ -41,11 +41,11 @@ Open [this](https://dang0ta.github.io/triphunter/) link for the live version of 
 - [x]  ensure there's animate-based and transition-based animation on the page.
 - [ ]  add technical documentation.
 - [ ]  add deployment, custom domain, and configuration documentation to the Readme.
-- [ ]  deploy the page to the internet using custom domain.
+- [x]  deploy the page to the internet using custom domain.
 - [ ]  add screenshots for each major update to the page.
 - [ ]  ensure the deployed page has at least 90 rating on Google Lighthouse.
 - [ ]  add dark/light mode toggle.
-- [ ]  create non-JS image carousel.
+- [x]  create non-JS image carousel.
 
 
 ## Screenshot
